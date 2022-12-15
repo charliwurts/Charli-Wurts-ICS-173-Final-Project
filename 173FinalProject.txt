@@ -1,0 +1,13 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+data = pd.read.csv('https://laulima.hawaii.edu/access/content/attachment/MAU.45104.202310/Announcements/93f92089-621c-48d0-b1c1-aaea0fccfafd/Ambient%20Parameters%20Station%201%20SXE_03-28-22.csv')
+
+data[['Ambient Temperature Temp.', 'Vapor Pressure Deficit']].plot(
+	kind='scatter',
+	x='Ambient Temperature Temp. (Degrees Fahrenheit)',
+	y='Vapor Pressure Deficit (kPa)',
+	title='Ambient Temperature compared to Vapor Pressure Deficit',
+	figsize=(12,8)
+)
